@@ -1,3 +1,4 @@
+.metadata
 *#
 *.iml
 *.ipr
@@ -12,7 +13,6 @@
 .factorypath
 .gradle
 .idea
-.metadata
 .project
 .recommenders
 .settings
