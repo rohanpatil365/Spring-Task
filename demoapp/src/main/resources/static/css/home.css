@@ -1,0 +1,15 @@
+body
+{
+	background : #f8f9fc;
+}
+
+.shadow
+{
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+
+.shadow:hover
+{
+	cursor: pointer;
+	box-shadow: 0 .15rem 1.75rem 1rem rgba(58,59,69,.15);
+}
