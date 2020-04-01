@@ -1,0 +1,24 @@
+#First Database Connection
+schema1.db.driver=com.mysql.jdbc.Driver
+schema1.db.url=jdbc:mysql://localhost:3306/multidb_schema1
+schema1.db.username=root
+schema1.db.password=Rohan@365
+
+##Second Database Connection
+#schema2.db.driver=com.mysql.jdbc.Driver
+#schema2.db.url=jdbc:mysql://localhost:3306/multidb_schema2
+#schema2.db.username=root
+#schema2.db.password=Rohan@365
+#
+##Third Database Connection
+#schema3.db.driver=com.mysql.jdbc.Driver
+#schema3.db.url=jdbc:mysql://localhost:3306/multidb_schema3
+#schema3.db.username=root
+#schema3.db.password=Rohan@365
+
+#Hibernate Configurations
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+hibernate.show_sql=false
+hibernate.format_sql=false
+entitymanager.packages.to.scan=com.rohan
+connection.release_mode=auto

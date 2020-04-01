@@ -1,0 +1,5 @@
+package com.rohan.demoapp.dao;
+
+public interface UserRepository {
+
+}

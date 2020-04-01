@@ -1,0 +1,6 @@
+package com.rohan.demoapp.entity;
+
+
+public class UserEntity {
+	
+}

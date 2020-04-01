@@ -1,0 +1,24 @@
+#Main Database Connection
+schema1.db.driver=org.postgresql.Driver
+schema1.db.url=jdbc:mysql://localhost:3306/multidb_schema1
+schema1.db.username=root
+schema1.db.password=Rohan@365
+
+#Second Database Connection
+second.db.driver=org.postgresql.Driver
+second.db.url=jdbc:postgresql://192.168.32.128:5432/multidb2
+second.db.username=multidbusr
+second.db.password=secret
+
+#Third Database Connection
+third.db.driver=org.postgresql.Driver
+third.db.url=jdbc:postgresql://192.168.32.128:5432/multidb3
+third.db.username=multidbusr
+third.db.password=secret
+
+#Hibernate Configurations
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+hibernate.show_sql=false
+hibernate.format_sql=false
+entitymanager.packages.to.scan=org.paulushc
+connection.release_mode=auto

@@ -1,0 +1,21 @@
+package com.rohan.demoapp.utils;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EntityManagerUtils {
+	
+	@Autowired
+    @Qualifier("schemaOneEntityManager")
+	private EntityManager schemaOneEntityManager;
+	
+	@Autowired
+    @Qualifier("schemaTwoEntityManager")
+	private EntityManager schemaTwoEntityManager;
+	
+	@Autowired
+    @Qualifier("schemaThreeEntityManager")
+	private EntityManager schemaThreeEntityManager;
+}
