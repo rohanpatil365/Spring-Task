@@ -22,7 +22,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.rohan")
-@PropertySource("file:./database.properties")
+//@PropertySource("file:./database.properties")
+@PropertySource("file:./src/main/resources/database.properties")
 @EnableJpaRepositories(
         basePackages = "com.rohan",
         entityManagerFactoryRef = "schemaOneEntityManager",
