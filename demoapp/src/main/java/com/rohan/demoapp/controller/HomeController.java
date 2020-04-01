@@ -8,7 +8,7 @@ public class HomeController {
 	
 	@GetMapping("/")
     public String showHomePage() {
-		System.out.println("Inside Home Controller updated fbkhwf");
+		System.out.println("Inside Home Controller ddbewb");
         return "index";
     }
 	
