@@ -22,10 +22,6 @@ public class ReportOneController {
 	@GetMapping(value="/report1")
 	public List<Object> getAllReportOneData()
 	{
-//		for(int i=0;i<Constants.ACCOUNT_LIST.length;i++)
-//		{
-//			
-//		}
 		setRepository(3);
 		List<Object> reportOneAllObjects = repository.getDataGroupByInfo();
 		return reportOneAllObjects;
