@@ -16,4 +16,9 @@ public class HomeController {
         return "home";
     }
 	
+	@GetMapping("/report/ccreport")	
+	public String showCauseCodeReport() {
+        return "causeCodeReport";
+    }
+	
 }
