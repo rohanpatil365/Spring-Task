@@ -25,11 +25,11 @@ public class EntityManagerUtils {
 	public EntityManager getEntitymanagerForSchema(int em_id){
         switch(em_id)
         {
-         case 1:
+         case 0:
         	 return schemaOneEntityManager;
-         case 2:
+         case 1:
         	 return schemaTwoEntityManager;
-         case 3:
+         case 2:
         	 return schemaThreeEntityManager;
          default:
         	 return schemaOneEntityManager;

@@ -48,7 +48,7 @@ public class UserController {
 	@RequestMapping(value = "/all")
 	public String getAllUsers(Model model) {
 		allUserList = new ArrayList<Iterable<UserEntity>>();
-		for(int i=1;i<=3;i++)
+		for(int i=0;i<3;i++)
 		{
 			setRepository(i);
 			Iterable<UserEntity> userList = repository.findAll();
