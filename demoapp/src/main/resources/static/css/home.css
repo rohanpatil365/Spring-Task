@@ -15,5 +15,15 @@ body
 
 .left-border
 {
-	border-left: 3px solid #007bff;
+	border-left: 3px solid #007bff !important;
+}
+
+a.nav-link
+{
+	border-left: 3px solid transparent;
+}
+
+a.nav-link:hover
+{
+	border-left: 3px solid #cbd3da;
 }

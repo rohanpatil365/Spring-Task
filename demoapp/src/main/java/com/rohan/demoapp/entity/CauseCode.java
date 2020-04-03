@@ -31,6 +31,9 @@ public class CauseCode {
 	
 	@Column(name = "created_at")
 	private LocalDate createdAt;
+	
+	@Column(name = "account")
+	private String account;
 
 	/**
 	 * @return the id
@@ -115,6 +118,22 @@ public class CauseCode {
 	public void setCreatedAt(LocalDate createdAt) {
 		this.createdAt = createdAt;
 	}
+
+	/**
+	 * @return the account
+	 */
+	public String getAccount() {
+		return account;
+	}
+
+	/**
+	 * @param account the account to set
+	 */
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	
+	
 	
 	
 }
