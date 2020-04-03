@@ -54,13 +54,13 @@
 						<!-- Bar Chart -->
 						<div class="card shadow mb-4" id="cc_report_container">
 							<div class="card-header py-3">
-								<h6 class="m-0 font-weight-bold text-primary d-inline-block">Bar Chart</h6>
+								<h6 class="m-0 font-weight-bold text-primary d-inline-block">Cause Code Report</h6>
 
 								<select class="form-control d-inline col-xl-2 ml-5 float-right" id="sector-select">
 							      <option value="-1">select sector</option>
-							      <option value="Account1">sector1</option>
-							      <option value="Account2">sector2</option>
-							      <option value="Account3">sector3</option>
+							      <option value="sector1">sector1</option>
+							      <option value="sector2">sector2</option>
+							      <option value="sector3">sector3</option>
 							      <option value="all">all</option>
 							    </select>
 							       
@@ -70,7 +70,10 @@
 									<canvas id="cc_report_canvas"></canvas>
 								</div>
 								<hr>
-								Graph related small details goes here.
+								<p class="text-center m-0">
+									<code>x-axis: </code> <span class="mr-2" id="cc_report_x">sector-name</span>
+									<code>y-axis: </code> <span class="mr-2" id="cc_report_y">cause code count</span>
+								</p>
 							</div>
 							<div class="spinner-border text-primary text-center" id="cc_report_spinner" role="status">
 								<span class="sr-only">Loading...</span>
