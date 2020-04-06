@@ -15,230 +15,181 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
-  <div id="wrapper" class="h-100">
-  <div class="row m-0 h-100">
-  	<!-- sidebar start -->
-  	<nav class="col-md-2 d-none d-md-block bg-dark sidebar pt-5 px-0">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active text-primary left-border" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-              Dashboard <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              Integrations
-            </a>
-          </li>
-        </ul>
+<div th:replace="header :: header"></div>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-2 text-muted">
-          <span>Reports</span>
-        </h6>
-        
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link text-light" href="/report/ccreport">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              Cause Code Report
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              Report 2
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              Report 3
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  	<!-- sidebar end -->
-    <div id="content-wrapper" class="col-md-10">
-      <div class="container-fluid mt-3">
+<div id="wrapper" class="h-100">
+	  <div class="row m-0 h-100">
+	  
+	  	<!-- sidenav start -->
+		<div th:replace="sidenav :: sidenav">
+		</div>
+		<!-- sidenav end -->
+		
+		<!-- content start -->
+		<div id="content-wrapper" class="col-md-12">
+	    	<div class="container-fluid mt-3">
+	    		<!-- Add your contents from here -->
+	    		<div class="row">
+		          <!-- Earnings (Monthly) Card Example -->
+		          <div class="col-xl-4 col-md-6 mb-4">
+		            <div class="card left-border shadow h-100 py-2">
+		              <div class="card-body">
+		                <div class="row no-gutters align-items-center">
+		                  <div class="col mr-2">
+		                    <div class="font-weight-bold text-primary text-uppercase mb-3">
+		                    	Cause Code Report
+		                    </div>
+		                    <div class="h6 mb-0 font-weight-bold text-gray-800">
+		                    	<a class="btn btn-outline-primary" href="/report/ccreport" role="button">View Report</a>
+		                    </div>
+		                  </div>
+		                  <div class="col-auto">
+		                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		
+		          <!-- Earnings (Monthly) Card Example -->
+		          <div class="col-xl-4 col-md-6 mb-4">
+		            <div class="card left-border shadow h-100 py-2">
+		              <div class="card-body">
+		                <div class="row no-gutters align-items-center">
+		                  <div class="col mr-2">
+		                    <div class="font-weight-bold text-primary text-uppercase mb-3">
+		                    	Report 2
+		                    </div>
+		                    <div class="h6 mb-0 font-weight-bold text-gray-800">
+		                    	<a class="btn btn-outline-primary" href="#" role="button">View Report</a>
+		                    </div>
+		                  </div>
+		                  <div class="col-auto">
+		                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		
+		          <!-- Pending Requests Card Example -->
+		          <div class="col-xl-4 col-md-6 mb-4">
+		            <div class="card left-border shadow h-100 py-2">
+		              <div class="card-body">
+		                <div class="row no-gutters align-items-center">
+		                  <div class="col mr-2">
+		                    <div class="font-weight-bold text-primary text-uppercase mb-3">
+		                    	Report 3
+		                    </div>
+		                    <div class="h6 mb-0 font-weight-bold text-gray-800">
+		                    	<a class="btn btn-outline-primary" href="#" role="button">View Report</a>
+		                    </div>
+		                  </div>
+		                  <div class="col-auto">
+		                    <i class="fas fa-comments fa-2x text-gray-300"></i>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		
+		        </div>
+		
+		        <div class="row">
+		
+		          <div class="col-lg-6">
+		
+		            <!-- Basic Card Example -->
+		            <div class="card shadow mb-4">
+		              <div class="card-header py-3">
+		                <h6 class="m-0 font-weight-bold text-primary">What Is ROOCA?</h6>
+		              </div>
+		              <div class="card-body">
+		                Capgemini proprietary Root Cause Nanobot focused on Problem Management that Uses NLP (Natural Language
+		                Processing) technique to identify nearest matching solution for an incident from the KEDB (Known-error
+		                Database), displaying an existing RCA and helping you get to the root cause of the problem faster while
+		                also displaying a ready solution for a similar issue which has occurred in the past
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-lg-6">
+		
+		            <!-- Basic Card Example -->
+		            <div class="card shadow mb-4">
+		              <div class="card-header py-3">
+		                <h6 class="m-0 font-weight-bold text-primary">What is FMA Process?</h6>
+		              </div>
+		              <div class="card-body">
+		                Failure modes analysis (FMA) is a step-by-step approach for identifying all possible failures in a
+		                service. Failure modes means the ways, or modes, in which something might fail. Failures are prioritized
+		                according to how serious their
+		                consequences are, how frequently they occur and how easily they can be detected. The purpose of the FMA
+		                is to take actions to eliminate or reduce failures, starting with the highest-priority ones.
+		              </div>
+		            </div>
+		
+		          </div>
+		
+		        </div>
+		        
+		        <div class="row">
+		
+		          <div class="col-lg-6">
+		
+		            <!-- Basic Card Example -->
+		            <div class="card shadow mb-4">
+		              <div class="card-header py-3">
+		                <h6 class="m-0 font-weight-bold text-primary">What is RPN?</h6>
+		              </div>
+		              <div class="card-body">
+		                The Risk Priority Number (RPN), is a numeric assessment of risk assigned to each failure that quantify
+		                likelihood of occurrence, likelihood of detection, and severity of impact.
+		              </div>
+		            </div>
+		          </div>
+		
+		          <div class="col-lg-6">
+		
+		            <!-- Basic Card Example -->
+		            <div class="card shadow mb-4">
+		              <div class="card-header py-3">
+		                <h6 class="m-0 font-weight-bold text-primary">What is SIP?</h6>
+		              </div>
+		              <div class="card-body">
+		                Service Improvement Plan (SIP) refers to the steps that have to be taken to permanently fix a failure.
+		              </div>
+		            </div>
+		
+		          </div>
+		         
+		        </div>
+	    		
+	    		
+	    		<!-- your contents ends here -->
+	    	</div>
+	    </div>
+	    <!-- content end -->
+	    
+	  </div>
+</div>
 
-		<!--  
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        </div>
-        -->
+<div th:replace="footer :: footer"></div>
 
-        <div class="row">
-          <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card left-border shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="font-weight-bold text-primary text-uppercase mb-3">
-                    	Cause Code Report
-                    </div>
-                    <div class="h6 mb-0 font-weight-bold text-gray-800">
-                    	<a class="btn btn-outline-primary" href="/report/ccreport" role="button">View Report</a>
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<script type="text/javascript">
 
-          <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card left-border shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="font-weight-bold text-primary text-uppercase mb-3">
-                    	Report 2
-                    </div>
-                    <div class="h6 mb-0 font-weight-bold text-gray-800">
-                    	<a class="btn btn-outline-primary" href="#" role="button">View Report</a>
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+$("#sidebar-toggle").click(function(){
+	$("#nav-sidebar").toggleClass("d-md-block");
+	$("#content-wrapper").toggleClass("col-md-10 col-md-12");
+	$("#sidebar-toggle i").toggleClass("fa-bars fa-close");
+});
 
-          <!-- Pending Requests Card Example -->
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card left-border shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="font-weight-bold text-primary text-uppercase mb-3">
-                    	Report 3
-                    </div>
-                    <div class="h6 mb-0 font-weight-bold text-gray-800">
-                    	<a class="btn btn-outline-primary" href="#" role="button">View Report</a>
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+$("#nav-dashboard").addClass("active");
 
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">What Is ROOCA?</h6>
-              </div>
-              <div class="card-body">
-                Capgemini proprietary Root Cause Nanobot focused on Problem Management that Uses NLP (Natural Language
-                Processing) technique to identify nearest matching solution for an incident from the KEDB (Known-error
-                Database), displaying an existing RCA and helping you get to the root cause of the problem faster while
-                also displaying a ready solution for a similar issue which has occurred in the past
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">What is FMA Process?</h6>
-              </div>
-              <div class="card-body">
-                Failure modes analysis (FMA) is a step-by-step approach for identifying all possible failures in a
-                service. Failure modes means the ways, or modes, in which something might fail. Failures are prioritized
-                according to how serious their
-                consequences are, how frequently they occur and how easily they can be detected. The purpose of the FMA
-                is to take actions to eliminate or reduce failures, starting with the highest-priority ones.
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">What is RPN?</h6>
-              </div>
-              <div class="card-body">
-                The Risk Priority Number (RPN), is a numeric assessment of risk assigned to each failure that quantify
-                likelihood of occurrence, likelihood of detection, and severity of impact.
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">What is SIP?</h6>
-              </div>
-              <div class="card-body">
-                Service Improvement Plan (SIP) refers to the steps that have to be taken to permanently fix a failure.
-              </div>
-            </div>
-
-          </div>
-         
-        </div>
-      </div>
-
-    </div>
- </div>
-  </div>
-
-  
+</script> 
 </body>
-
 </html>
