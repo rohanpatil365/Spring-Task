@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+
+<meta charset="utf-8">
+<script type="text/javascript">
+/* jQuery(document).ready(function(){
+	 $("#opener").click(function() {
+		    $("#dialog1").dialog('open');
+		 autoOpen: false,
+		    show: 'slide',
+		    resizable: false,
+		    position: 'center',
+		    stack: true,
+		    height: 'auto',
+		    width: 'auto',
+		    modal: false
+	 */
+$(function () {
+  $( "#dialog1" ).dialog({
+    autoOpen: false
+  });
+  
+  $("#opener").click(function() {
+    $("#dialog1").dialog('open');
+  });
+  
+});
+		
+		  
+
+    
+    
+
+
+</script>
+
+<title>Creating Fixed Header and Footer with CSS</title>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px; 
+        background-image: url('/img/backgroundimage2.jpg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;    
+            
+        background: #0dc176ab;
+        padding: 10px 0;
+        color: #fff;
+    }
+  
+
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+</style>
+</head>
+<body>
+<!-- <img src='/img/backgroundimg.jpg' width="500" height="600"> 
+<div id="divdeps" style="display:none" title="About"></div>
+ -->
+
+
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="#">Home</a>
+                <a id="opener"href="#">About</a>
+                <a href="#">Incident Data Screen</a>
+                <a href="#">RPA Screen</a>
+                <a href="#">Solution Screen</a>
+            </nav>
+        </div>
+    </div>
+<div>
+<div id="dialog1" title="About" hidden="hidden">
+<font size="4" color="black">You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a div element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.
+</font>
+</div>   
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2016 Your Company</div>        
+    </div>
+    </div>
+</body>
+</html>                            
